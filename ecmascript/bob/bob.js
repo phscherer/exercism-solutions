@@ -8,20 +8,17 @@ export default class Bob {
   }
 
   hey(message) {
-    let response = 'Whatever.';
-
     if (this.isShouting(message) && !this.isAllNumbers(message)) {
-      response = 'Whoa, chill out!';
+      return 'Whoa, chill out!';
     } else if (this.isQuestion(message)) {
-      response = 'Sure.';
+      return 'Sure.';
     }
     if (this.isSilence(message)) {
-      response = 'Fine. Be that way!';
+      return 'Fine. Be that way!';
     }
     if (this.isAllNumbers(message) && this.isExclamation(message)) {
-      response = 'Whoa, chill out!';
+      return 'Whoa, chill out!';
     }
-
-    return response;
+    return 'Whatever.';
   }
 }
